@@ -1,0 +1,17 @@
+<div id='event_confirmation'>
+	<% if @new_event.errors.any? %>
+	  	<div>
+	    	<h2> This event was not saved because:</h2>
+	 
+		    <ul>
+		    <% @new_event.errors.full_messages.each do |msg| %>
+		      <li><%= msg %></li>
+		    <% end %>
+		    </ul>
+	    </div>
+	<% else %>
+		<div>
+			<h2>Your event has been saved.</h2>
+		</div>
+	<% end %>
+</div>
